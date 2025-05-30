@@ -20,4 +20,6 @@ test('_curry2 with single placeholder', () => {
 test('_curry2 Whole test', () => {
   expect(curriedF(_, _)(1, 2)).toEqual([1, 2]);
   expect(curriedF(_, _)(1)(5)).toEqual([1, 5]);
+  expect(curriedF(4, _)(6)).toEqual([4, 6]);
+  expect(curriedF(_, 6)(4)).toEqual([4, 6]);
 });
